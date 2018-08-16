@@ -98,7 +98,7 @@ TCal = {
 		}
 		
 		var yn = this.getYearName(y);
-		var mn = this.getMonthName(m);
+		var mn = this.getMonthName(m, leap);
 		var dn = this.getDayName(d);
 
 		return {y:y, m:m, d:d, yn:yn, mn: mn, dn: dn, leap:leap};
@@ -167,8 +167,8 @@ TCal = {
 		}
 		return result + "年";
 	},
-	getMonthName: function(i){
-		return this.MN[i-1] + "月";
+	getMonthName: function(i, leap){
+		return leap == true ? "闰" + this.MN[i-1] + "月" : this.MN[i-1] + "月";
 	},
 	getDayName: function(i){
 		return this.DN[i-1];
