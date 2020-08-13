@@ -25,6 +25,8 @@ TCal.get("2000/1/1");
   leap: false ，//是否闰月
   wd: 6，    //周几， 从1开始
   wdn: "周六"}
+   
+  this is ok 
 
 ```
 
